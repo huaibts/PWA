@@ -4,12 +4,7 @@
   "lang": "zh-TW",
   "start_url": "https://huaibts.github.io/PWA/",
   "display": "standalone",
-  "icons": [
-    {
-      "src": "images\\icons\\apple-icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png"
-    },
+  
   
   {
     "src": "/android-icon-36x36.png",
