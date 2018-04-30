@@ -17,6 +17,16 @@ self.addEventListener('install', event => {
 });
 self.addEventListener('activate', event => {
   console.log('[ServiceWorker] Activate');
+  event.waitUntil(
+    caches.keys()
+    .then(keyList => {
+      return Promise.all(keyList.map(key => {
+        if (key !== cacheVersion) {
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
 });
 self.addEventListener('fetch', event => {
   console.log('[ServiceWorker] fetch', event.request);
