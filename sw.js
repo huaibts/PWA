@@ -4,6 +4,7 @@ const filesToCache = [
   'register_sw.js',
   
 ];
+
 self.addEventListener('install', event => {
   console.log('[ServiceWorker] Install');
   event.waitUntil(
