@@ -15,6 +15,7 @@ self.addEventListener('install', event => {
     })
   );
 });
+
 self.addEventListener('activate', event => {
   console.log('[ServiceWorker] Activate');
   event.waitUntil(
@@ -28,6 +29,7 @@ self.addEventListener('activate', event => {
     })
   );
 });
+
 self.addEventListener('fetch', event => {
   console.log('[ServiceWorker] fetch', event.request);
   event.respondWith(
