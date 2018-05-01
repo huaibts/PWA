@@ -4,6 +4,8 @@
   "lang": "zh-TW",
   "start_url": "https://huaibts.github.io/PWA/",
   "display": "standalone",
+  "theme_color": "#E6E6FA",
+  "background_color": "#E6E6FA",
   
  "icons": [
   {
