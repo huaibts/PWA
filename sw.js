@@ -4,7 +4,6 @@ const filesToCache = [
   'register_sw.js',
   
 ];
-
 self.addEventListener('install', event => {
   console.log('[ServiceWorker] Install');
   event.waitUntil(
@@ -15,21 +14,9 @@ self.addEventListener('install', event => {
     })
   );
 });
-
 self.addEventListener('activate', event => {
   console.log('[ServiceWorker] Activate');
-  event.waitUntil(
-    caches.keys()
-    .then(keyList => {
-      return Promise.all(keyList.map(key => {
-        if (key !== cacheVersion) {
-          return caches.delete(key);
-        }
-      }));
-    })
-  );
 });
-
 self.addEventListener('fetch', event => {
   console.log('[ServiceWorker] fetch', event.request);
   event.respondWith(
